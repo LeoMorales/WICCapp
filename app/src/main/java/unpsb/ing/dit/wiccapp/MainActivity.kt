@@ -7,6 +7,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import unpsb.ing.dit.wiccapp.ui.login.LoginScreen
+import unpsb.ing.dit.wiccapp.ui.login.LoginViewModel
 import unpsb.ing.dit.wiccapp.ui.screens.Hello
 import unpsb.ing.dit.wiccapp.ui.screens.Second
 import unpsb.ing.dit.wiccapp.ui.theme.WICCappTheme
@@ -27,8 +29,9 @@ class MainActivity : ComponentActivity() {
 fun MyApp() {
     val navController = rememberNavController()
     NavHost(navController, startDestination = "screen1") {
-        composable("screen1") { Hello(navController) }
-        composable("screen2") { Second(navController) }
+        composable("screen1") { LoginScreen(LoginViewModel())}
+        composable("screen2") { Hello(navController) }
+        composable("screen3") { Second(navController) }
     }
 }
 
