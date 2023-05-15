@@ -28,8 +28,8 @@ fun Hello(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Greeting("Android")
-            Button(onClick = { navController.navigate("screen2") }) {
-                Text("Go to Screen 2")
+            Button(onClick = { navController.navigate("screen3") }) {
+                Text("Go to Composable Map")
             }
 
         }
