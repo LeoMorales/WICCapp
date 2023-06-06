@@ -39,7 +39,7 @@ fun Second_(
     }
 }
 @Composable
-fun Second(
+fun MapScreen(
     navController: NavController,
     modifier: Modifier = Modifier
 ) {
@@ -47,7 +47,7 @@ fun Second(
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background
     ) {
-        val singapore = LatLng(1.35, 103.87)
+        val singapore = LatLng(-42.785824492960906, -65.00574843722868)
         val cameraPositionState = rememberCameraPositionState {
             position = CameraPosition.fromLatLngZoom(singapore, 10f)
         }
@@ -69,6 +69,6 @@ fun Second(
 @Composable
 fun PreviewSecond() {
     val navController = rememberNavController()
-    Second(navController)
+    MapScreen(navController)
 
 }

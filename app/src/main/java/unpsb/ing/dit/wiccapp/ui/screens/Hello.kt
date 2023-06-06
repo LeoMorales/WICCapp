@@ -29,7 +29,7 @@ fun Hello(navController: NavController) {
         ) {
             Greeting("Android")
             Button(onClick = { navController.navigate("screen3") }) {
-                Text("Go to Composable Map")
+                Text("Ver ubicación del WICC 2024")
             }
 
         }

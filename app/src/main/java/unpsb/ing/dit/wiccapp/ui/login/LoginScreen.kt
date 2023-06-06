@@ -21,22 +21,26 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import kotlinx.coroutines.launch
 import unpsb.ing.dit.wiccapp.R
 
 @Composable
-fun LoginScreen(viewModel: LoginViewModel) {
+fun LoginScreen(viewModel: LoginViewModel, navController: NavController) {
     Box(
         Modifier
             .fillMaxSize()
             .padding(16.dp)
     ) {
-        Login(Modifier.align(Alignment.Center), viewModel)
+        Login(
+            Modifier.align(Alignment.Center),
+            viewModel
+        ) { navController.navigate("screen2") }
     }
 }
 
 @Composable
-fun Login(modifier: Modifier, viewModel: LoginViewModel) {
+fun Login(modifier: Modifier, viewModel: LoginViewModel, onLoginSuccesfull: () -> Unit) {
 
     val email: String by viewModel.email.observeAsState(initial = "")
     val password: String by viewModel.password.observeAsState(initial = "")
@@ -61,6 +65,7 @@ fun Login(modifier: Modifier, viewModel: LoginViewModel) {
             LoginButton(loginEnable) {
                 coroutineScope.launch {
                     viewModel.onLoginSelected()
+                    onLoginSuccesfull()
                 }
             }
         }
