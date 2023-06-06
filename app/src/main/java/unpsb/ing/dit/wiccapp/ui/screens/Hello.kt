@@ -27,9 +27,9 @@ fun Hello(navController: NavController) {
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Greeting("Android")
-            Button(onClick = { navController.navigate("screen3") }) {
-                Text("Ver ubicación del WICC 2024")
+            Greeting("WICC 2024")
+            Button(onClick = { navController.navigate("map_screen") }) {
+                Text("Ver ubicación")
             }
 
         }
@@ -38,7 +38,7 @@ fun Hello(navController: NavController) {
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+    Text(text = "Welcome to $name!")
 }
 
 @Preview(showBackground = true)

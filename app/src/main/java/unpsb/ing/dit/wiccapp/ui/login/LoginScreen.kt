@@ -35,7 +35,7 @@ fun LoginScreen(viewModel: LoginViewModel, navController: NavController) {
         Login(
             Modifier.align(Alignment.Center),
             viewModel
-        ) { navController.navigate("screen2") }
+        ) { navController.navigate("hello_screen") }
     }
 }
 

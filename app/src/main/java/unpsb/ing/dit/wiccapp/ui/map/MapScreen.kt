@@ -1,14 +1,9 @@
 package unpsb.ing.dit.wiccapp.ui.screens
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
@@ -20,24 +15,6 @@ import com.google.maps.android.compose.Marker
 import com.google.maps.android.compose.MarkerState
 import com.google.maps.android.compose.rememberCameraPositionState
 
-@Composable
-fun Second_(
-    navController: NavController,
-    modifier: Modifier = Modifier
-) {
-    Surface(
-        modifier = Modifier.fillMaxSize(),
-        color = MaterialTheme.colorScheme.background
-    ) {
-        Column(
-            modifier = Modifier.fillMaxHeight(),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
-            Text(text = "Second!")
-        }
-    }
-}
 @Composable
 fun MapScreen(
     navController: NavController,
@@ -57,8 +34,8 @@ fun MapScreen(
         ) {
             Marker(
                 state = MarkerState(position = singapore),
-                title = "Singapore",
-                snippet = "Marker in Singapore"
+                title = "UNPSJB",
+                snippet = "WICC en Puerto Madryn"
             )
         }
 
